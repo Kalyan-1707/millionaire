@@ -1,0 +1,11 @@
+div.ques-border{
+    border-style: solid;
+    border: 2px solid rgb(0,170,255);
+    padding: 0.25em 0.5em;
+    border-radius: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+div.ques-border p{
+    font-size: 1.5rem;
+}

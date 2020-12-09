@@ -1,0 +1,27 @@
+Nav{
+    background-color: rgb(38,42,53);
+    color: whitesmoke;
+    padding: 0.5em 2em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+Nav .brand{
+    font-size: 1.5rem;
+}
+
+Nav button{
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: orange;
+    border: none;
+    outline: none;
+    color: white;
+    border-radius: 0.25em;
+    padding: 0.25em 1em;
+}
+
+Nav button:hover,button:focus{
+    box-shadow: 0 0 10px orangered;
+}
