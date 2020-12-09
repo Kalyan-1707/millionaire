@@ -1,5 +1,4 @@
 import React,{useState,useEffect} from 'react';
-import Home from './Components/Home';
 import {Fetch} from './Components/Fetch';
 import Quiz from './Components/Quiz';
 import './App.css';
@@ -102,7 +101,7 @@ function App() {
 
 
     if(selectedChoice === apiData[currQues]["correct_answer"]){
-      if(currQues == 4){
+      if(currQues === 4){
         setamountWon(() => amountPerQues[4]);
       }
       updateDashBorad(true);
