@@ -14,14 +14,26 @@ Nav .brand{
 Nav button{
     font-size: 1rem;
     cursor: pointer;
-    background-color: orange;
+    background-color: rgb(38,42,53);
     border: none;
     outline: none;
     color: white;
     border-radius: 0.25em;
-    padding: 0.25em 1em;
+    padding: 0.25em 0.5em;
 }
 
+Nav button.toggle{
+    display: none;
+}
+
+
+
 Nav button:hover,button:focus{
-    box-shadow: 0 0 10px orangered;
+    box-shadow: 0 0 10px rgb(38,42,53);
+}
+
+@media only screen and (max-width: 600px) {   
+    Nav button.toggle{
+        display: block;
+    }
 }

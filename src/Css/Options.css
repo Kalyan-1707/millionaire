@@ -32,3 +32,16 @@ div.options-block button.correct-option{
 div.options-block button.wrong-option{
     background-color: burlywood;    
 }
+
+
+@media only screen and (max-width: 600px) {   
+
+    div.options-block{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 0.25em;
+    grid-row-gap:0.5em ;
+    }
+
+}

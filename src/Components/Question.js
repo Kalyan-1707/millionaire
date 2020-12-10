@@ -8,7 +8,7 @@ export default function Question({ques,id}) {
         </span>
 
         <div className="ques-border"> 
-            <p>{ques}</p>
+            <p dangerouslySetInnerHTML={{__html: ques}}></p>
         </div>  
         </div>
     )

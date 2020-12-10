@@ -9,6 +9,7 @@ main div.right-block{
 }
 
 main{
+    position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr   1fr;
     grid-template-areas: "left left left   right";
@@ -46,4 +47,35 @@ main div.right-block{
 .lifelines-block button:disabled{
     cursor: not-allowed;
    opacity: 0.5;
+}
+
+
+@media only screen and (max-width: 600px) {   
+  main{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr   1fr;
+    grid-template-areas: "left left left left";
+    grid-column-gap: 0.5em;
+}
+main div.right-block{
+    position: absolute;
+    top:0%;
+    right:0%;
+    width: 30vh;
+    background-color: rgb(38,42,53);
+    display: none;
+    animation: slide 1s ease-in;
+}
+
+@keyframes slide{
+    from {
+        transform: translateX(200px);
+    }
+
+    to {
+        transform: translateX(0px);
+    }
+}
+
 }

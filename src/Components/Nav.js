@@ -1,10 +1,14 @@
 import React from 'react'
 
-export default function Nav({end}) {
+export default function Nav({toggleMenu}) {
     return (
         <nav>
             <span className="brand">Millionaire</span>
-            {end && <button>End</button>}
+            <button className="toggle" onClick={() => toggleMenu()}>
+                <span className="material-icons">menu
+                </span>
+            </button>
+            
         </nav>
     )
 }

@@ -8,7 +8,14 @@ export default function Options({currQues,opts,validateChoice}) {
     return (
         <div className="options-block">
             {
-                opts.map((opt,index) => <button  key={`ques-${currQues}-opt-${index}`} id={`ques-${currQues}-opt-${index}`} value={opt} onClick={(Event) => validateChoice(Event)}>{opt}</button>)
+                opts.map((opt,index) => 
+                         <button  
+                            key={`ques-${currQues}-opt-${index}`} 
+                            id={`ques-${currQues}-opt-${index}`} 
+                            value={opt} 
+                            onClick={(Event) => validateChoice(Event)} 
+                            dangerouslySetInnerHTML={{__html: opt}}>
+                         </button>)
             }
         </div>
     )

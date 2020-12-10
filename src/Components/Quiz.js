@@ -1,14 +1,12 @@
 import React from 'react';
-import Nav from './Nav';
 import Question from './Question';
 import Options from './Options';
 import DashBorad from './DashBorad';
 
-export default function Quiz({currQues,onClickNext,id,validateChoice,LifeLine1,LifeLine2}) {
+export default function Quiz({currQues,onClickNext,id,validateChoice,LifeLine1,LifeLine2,onClickQuit}) {
     console.log(currQues);
     return (
         <div>
-            <Nav end={true}/>
             <main>
                 <div className="left-block">
                     <Question ques={currQues.question} id={id}/>
@@ -23,7 +21,8 @@ export default function Quiz({currQues,onClickNext,id,validateChoice,LifeLine1,L
                                         
                 </div>
                 <div className="right-block">
-                    <DashBorad />
+                  
+                    <DashBorad onClickQuit={onClickQuit}/> 
                 </div>
             </main>            
         </div>

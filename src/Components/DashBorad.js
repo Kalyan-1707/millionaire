@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function DashBorad() {
+export default function DashBorad({onClickQuit}) {
     return (
         <div className="dashboard-block">
             <span  id={`ques-1-dash-id`}>1 : ₹ 5,000</span>
@@ -17,7 +17,8 @@ export default function DashBorad() {
             <span id={`ques-12-dash-id`}>12 : ₹ 1,00,00,000</span>
             <span id={`ques-13-dash-id`}>13 : ₹ 3,00,00,000</span>
             <span id={`ques-14-dash-id`}>14 : ₹ 7,00,00,000</span>
-            <span id={`ques-15-dash-id`}>15 : ₹ 15,00,00,000</span>            
+            <span id={`ques-15-dash-id`}>15 : ₹ 15,00,00,000</span>
+            <button onClick={() => onClickQuit()}>Quit</button>            
         </div>
     )
 }

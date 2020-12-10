@@ -14,6 +14,19 @@ div.dashboard-block span{
     padding: 0.25em;
 }
 
+div.dashboard-block button{
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: orange;
+    border: none;
+    outline: none;
+    color: white;
+    border-radius: 0.25em;
+    padding: 0.25em 1em;
+    margin-top:0.25em;
+    margin-bottom: 0.25em;
+}
+
 .active{
     color: aqua;
 }
@@ -26,3 +39,24 @@ div.dashboard-block span{
     color: green;
 }
 
+
+@media only screen and (max-width: 600px) {   
+    div.dashboard-block{
+    border:none;
+    padding: 0.25em 0.5em;
+    border-radius: 0.5em;
+    margin-bottom: 0.5em;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+}
+    div.dashboard-block span{
+    padding: 0.25em;
+    font-size: 1.2rem;
+    }
+    div.dashboard-block button{
+        font-size: 1.2rem;
+    }
+
+}
