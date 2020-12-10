@@ -24,11 +24,12 @@ Nav button{
 
 Nav button.toggle{
     display: none;
+    background: none;
 }
 
 
 
-Nav button:hover,button:focus{
+Nav button.toggle:hover,button.toggle:focus{
     box-shadow: 0 0 10px rgb(38,42,53);
 }
 
