@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from 'react';
+import React,{useState,useEffect,useRef} from 'react';
 import {Fetch} from './Components/Fetch';
 import Quiz from './Components/Quiz';
 import Nav from './Components/Nav';
@@ -19,6 +19,9 @@ function App() {
 
   const [amountWon,setamountWon] = useState(0);
   const [isCompleted,setIsCompleted] = useState(false);
+
+  
+
 
   const amountPerQues = [
                          "0",
@@ -202,7 +205,7 @@ function App() {
       {
         apiData 
           && 
-        <Quiz 
+        <Quiz
             currQues={apiData[currQues]}  
             id={currQues} 
             onClickNext={onClickNext} 
@@ -217,8 +220,8 @@ function App() {
           isCompleted
             &&
          <Confetti
-          width={1000}
-          height={400}
+          width={1200}
+          height={600}
           />
         }
         {

@@ -39,6 +39,10 @@ div.dashboard-block button{
     color: green;
 }
 
+hr{
+    border-style: solid;
+}
+
 
 @media only screen and (max-width: 600px) {   
     div.dashboard-block{

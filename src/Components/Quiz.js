@@ -4,7 +4,6 @@ import Options from './Options';
 import DashBorad from './DashBorad';
 
 export default function Quiz({currQues,onClickNext,id,validateChoice,LifeLine1,LifeLine2,onClickQuit}) {
-    console.log(currQues);
     return (
         <div>
             <main>

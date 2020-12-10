@@ -26,7 +26,7 @@ div.options-block button:disabled{
 }
 
 div.options-block button.correct-option{
-    background-color: green;
+    background-color: #22b622;
 }
 
 div.options-block button.wrong-option{
