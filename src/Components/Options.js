@@ -1,16 +1,24 @@
-import React,{useEffect} from 'react'
+import React from 'react'
 
 export default function Options({currQues,opts,validateChoice}) {
-        
-    useEffect(() => {
-        console.log("Correct answer - ",opts[0]);    
-        opts = opts.sort(() => Math.random() - 0.5);
-    }, [])
+
+    let options=[];
     
+    let count=4;
+    let i=currQues;
+    while(count>0)
+    {
+        options.push(opts[i%4]);    
+        i++;
+        count--;
+    }
+
+    console.log("Correct - answer",opts[0]);
+
     return (
         <div className="options-block">
             {
-                opts.map((opt,index) => 
+                options.map((opt,index) => 
                          <button  
                             key={`ques-${currQues}-opt-${index}`} 
                             id={`ques-${currQues}-opt-${index}`} 

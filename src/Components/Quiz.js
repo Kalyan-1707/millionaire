@@ -10,7 +10,9 @@ export default function Quiz({currQues,onClickNext,id,validateChoice,LifeLine1,L
                 <div className="left-block">
                     <Question ques={currQues.question} id={id}/>
                     
-                    <Options opts={[currQues["correct_answer"],...currQues["incorrect_answers"]]} validateChoice={validateChoice} currQues={id}/>
+                    <Options opts={[currQues["correct_answer"],...currQues["incorrect_answers"]]} 
+                             validateChoice={validateChoice} 
+                             currQues={id}/>
                    
                     <div className="lifelines-block">
                         <button onClick={(Event) => LifeLine1(Event)} id="life-line-google">Google</button>

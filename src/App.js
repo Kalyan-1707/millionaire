@@ -92,6 +92,7 @@ function App() {
   function onClickQuit() {
       setamountWon(() => amountPerQues[currQues]);
       setIsCompleted(() => true);
+      disableOptions();
   }
 
   function toggleMenu(){
@@ -113,8 +114,17 @@ function App() {
     {
       let temp=document.querySelector(`#ques-${currQues}-opt-${i}`);
         if(temp.value === apiData[currQues]["correct_answer"]){
+          temp.classList.remove("wrong-option")
           temp.classList.add("correct-option");
         }
+    }
+  }
+
+  function disableOptions() {
+    for(let i=0;i<4;i++)
+    {
+      let temp=document.querySelector(`#ques-${currQues}-opt-${i}`);
+        temp.disabled = true;
     }
   }
 
@@ -137,10 +147,12 @@ function App() {
     }
 
     else{
+      event.target.classList.add("wrong-option");
       updateDashBorad(false);
       setIsCompleted(() => true);
     }
 
+    disableOptions();
     updateOptions();
 
 
@@ -172,12 +184,12 @@ function App() {
   function LifeLine2(event){
     let incorrect_answers = apiData[currQues]["incorrect_answers"];
     incorrect_answers = incorrect_answers.sort(() => Math.random() - 0.5);
-    console.log(incorrect_answers);
+    //console.log(incorrect_answers);
 
     for(let i=0;i<4;i++)
     {
       let temp=document.querySelector(`#ques-${currQues}-opt-${i}`);
-      console.log(temp);
+      //console.log(temp);
         if(temp.value === incorrect_answers[0] || temp.value === incorrect_answers[1]){
           temp.innerText="";
           temp.value="";
@@ -220,7 +232,7 @@ function App() {
           <div className="modal">
             <p>Congratualtions,<br/>
              You won <br/>
-            {amountWon}
+            ₹ {amountWon}
             </p>
             <button onClick={() => window.location.reload()}>Play again</button> 
           </div>
