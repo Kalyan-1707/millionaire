@@ -161,24 +161,16 @@ function App() {
 
   //Google LifeLine
   function LifeLine1(event) {
-
     const newWind = window.open("https://www.google.com/");
-
     setTimeout(() => {
       newWind.close();
-    }, 5000);
-
+    }, 15000);
     event.target.disabled=true;
-
-
-    
   }
 
   // 50 50 Life line
   function LifeLine2(event){
-    
     let incorrect_answers = apiData[currQues]["incorrect_answers"];
-    
     incorrect_answers = incorrect_answers.sort(() => Math.random() - 0.5);
     console.log(incorrect_answers);
 
@@ -192,9 +184,7 @@ function App() {
           temp.disabled=true;
         }
     }
-
     event.target.disabled=true;
-
   }
 
 

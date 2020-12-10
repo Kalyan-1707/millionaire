@@ -1,8 +1,12 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 
 export default function Options({currQues,opts,validateChoice}) {
-        console.log("Correct answer - ",opts[0]);
+        
+    useEffect(() => {
+        console.log("Correct answer - ",opts[0]);    
         opts = opts.sort(() => Math.random() - 0.5);
+    }, [])
+    
     return (
         <div className="options-block">
             {
