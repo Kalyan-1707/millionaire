@@ -140,7 +140,10 @@ function App() {
       updateDashBorad(true);
 
       if(currQues === 14){
-        onClickQuit();
+        setamountWon(() => amountPerQues[currQues+1]);
+        setIsCompleted(() => true);
+        updateOptions();
+        disableOptions();
         return;
       }
       document.querySelector("#next-btn").style.display="block";
