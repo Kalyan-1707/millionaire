@@ -222,7 +222,7 @@ function App() {
           isCompleted
             &&
          <Confetti
-          width={1200}
+          width={1100}
           height={600}
           />
         }
