@@ -1,3 +1,12 @@
+# Instructions
+
+* Game will end if you choose wrong option.
+* Ques 5 & 10 are safe points. 
+* Life lines can be used only once.
+* With Google life line you can browse on google for 15 sec.
+* with 50 : 50 life line two wrong options are removed.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
